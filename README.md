@@ -4,8 +4,6 @@ An embedded C++ firmware for Arduino Leonard / Pro Micro paired with a USB Host 
 
 ---
 
-## 🛠 Hardware & Dependencies
-
 ### Hardware Requirements
 - **Arduino Board**: Arduino Leonardo, Pro Micro (ATmega32U4) or any board with native USB capability (`Mouse.h`).
 - **USB Host Shield 2.0**: Standard MAX3421E-based USB Host Shield (or mini host shield).
@@ -17,8 +15,6 @@ An embedded C++ firmware for Arduino Leonard / Pro Micro paired with a USB Host 
 - `SPI.h` & `Wire.h`
 
 ---
-
-## 📐 Architecture & Operation
 
 ```
 +------------------+         +----------------------------+         +------------------+
@@ -39,8 +35,6 @@ An embedded C++ firmware for Arduino Leonard / Pro Micro paired with a USB Host 
 3. **Default Passthrough**: If no serial data is queued, physical mouse movement inputs are passed through directly to maintaining seamless user control.
 
 ---
-
-## 💻 Firmware Code (`arduino_hid_passthrough.ino`)
 
 ```cpp
 #include <Mouse.h>
@@ -126,8 +120,6 @@ void loop() {
 ```
 
 ---
-
-## 💻 Host C++ Serial Communication Controller Example
 
 An example C++ Windows Win32 host controller application demonstrating how to open the Arduino CDC COM port and transmit 2-byte relative movement deltas `[int8_t dx, int8_t dy]`:
 
